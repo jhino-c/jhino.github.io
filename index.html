@@ -32,11 +32,22 @@
             left: 0; /* 좌측으로 정렬 */
             width: 100%; /* 부모 요소의 너비와 일치시킵니다. */
             height: 100%; /* 부모 요소의 높이와 일치시킵니다. */
+            animation: slide 5s linear infinite; /* 스와이프 애니메이션을 적용합니다. */
+        }
+
+        @keyframes slide {
+            0% {
+                transform: translateX(0); /* 초기 위치 */
+            }
+            100% {
+                transform: translateX(-100%); /* 우측에서 좌측으로 100% 이동 */
+            }
         }
 
         .image-container img {
-            max-width: 100%; /* 이미지의 최대 너비를 부모 요소의 너비에 맞춥니다. */
-            height: auto; /* 이미지의 높이를 자동으로 조정합니다. */
+            width: 100%; /* 이미지의 너비를 부모 요소에 맞게 설정합니다. */
+            height: 100%; /* 이미지의 높이를 부모 요소에 맞게 설정합니다. */
+            object-fit: cover; /* 이미지를 부모 요소에 맞추어 잘라냅니다. */
         }
     </style>
 </head>
@@ -44,33 +55,7 @@
     <div class="container">
         <div class="image-container">
             <img src="ani1-1.gif" alt="이미지 설명">
-            <img src="ani1-1.gif" alt="이미지 설명">
         </div>
     </div>
-
-    <script>
-        // 이미지의 높이를 창의 높이에 맞추고 너비를 원본 비율에 맞게 조정하는 함수
-        function resizeImages() {
-            var container = document.querySelector('.container');
-            var images = document.querySelectorAll('.image-container img');
-
-            var containerHeight = container.clientHeight;
-
-            images.forEach(function(img) {
-                var naturalWidth = img.naturalWidth;
-                var naturalHeight = img.naturalHeight;
-                var aspectRatio = naturalWidth / naturalHeight;
-
-                var newWidth = containerHeight * aspectRatio;
-                img.style.width = newWidth + 'px';
-                img.style.height = 'auto';
-            });
-        }
-
-        // 페이지가 로드될 때 resizeImages 함수를 호출하여 이미지 크기를 조정
-        window.onload = resizeImages;
-        // 창 크기가 변경될 때마다 resizeImages 함수를 호출하여 이미지 크기를 조정
-        window.onresize = resizeImages;
-    </script>
 </body>
 </html>
