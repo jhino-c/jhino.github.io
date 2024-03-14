@@ -7,7 +7,7 @@
     <style>
         /* CSS 스타일을 직접 포함하여 텍스트 창의 크기를 조정합니다. */
         body {
-            background-color: white; /* 전체 배경색을 검은색으로 설정합니다. */
+            background-color: black; /* 전체 배경색을 검은색으로 설정합니다. */
             color: white; /* 전체 글씨 색을 흰색으로 설정합니다. */
             margin: 0; /* body 요소의 외부 여백을 모두 0으로 설정하여 공백을 없앱니다. */
             padding: 0; /* body 요소의 내부 여백도 0으로 설정합니다. */
@@ -19,7 +19,7 @@
             height: 32px; /* 텍스트 창의 높이를 32px로 설정합니다. */
             margin: 0; /* 텍스트 창의 외부 여백을 모두 0으로 설정하여 내용을 왼쪽 상단으로 몰아줍니다. */
             text-align: left; /* 텍스트를 가운데 정렬합니다. */
-            background-color: white; /* 배경색을 검은색으로 설정합니다. */
+            background-color: black; /* 배경색을 검은색으로 설정합니다. */
             color: white; /* 글씨 색을 흰색으로 설정합니다. */
             font-size: 20px; /* 글씨 크기를 20px로 설정합니다. */
             line-height: 1;
@@ -32,12 +32,15 @@
             left: 0; /* 좌측으로 정렬 */
             width: 100%; /* 부모 요소의 너비와 일치시킵니다. */
             height: 100%; /* 부모 요소의 높이와 일치시킵니다. */
+            animation: slide 5s linear infinite; /* 스와이프 애니메이션을 적용합니다. */
+
         }
 
         .image-container img {
             max-width: 100%; /* 이미지의 최대 너비를 부모 요소의 너비에 맞춥니다. */
             height: auto; /* 이미지의 높이를 자동으로 조정합니다. */
         }
+
 @keyframes slide {
     0% {
         transform: translateX(0); /* 초기 위치 */
@@ -52,7 +55,8 @@
 <body>
     <div class="container">
         <div class="image-container">
-            <img src="ani1-1.gif" alt="이미지 설명">
+            <img src="이미지_파일_경로_또는_URL" alt="이미지 설명">
+            <img src="이미지_파일_경로_또는_URL" alt="이미지 설명">
         </div>
     </div>
 
