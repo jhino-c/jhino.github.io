@@ -4,18 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Website</title>
+    <style>
+        /* CSS 스타일을 직접 포함하여 텍스트 창의 크기를 조정합니다. */
+        .container {
+            width: 512px; /* 텍스트 창의 너비를 512px로 설정합니다. */
+            height: 64px; /* 텍스트 창의 높이를 64px로 설정합니다. */
+            margin: auto; /* 가운데 정렬을 위해 외부 여백을 자동으로 설정합니다. */
+            text-align: center; /* 텍스트를 가운데 정렬합니다. */
+            padding-top: 20px; /* 상단 여백을 추가합니다. */
+        }
+    </style>
 </head>
 <body>
-    <script>
-        // 창의 크기를 고정하는 함수
-        function setWindowSize() {
-            window.resizeTo(512, 64); // 창 크기를 512x64로 조절
-            window.moveTo(0, 0); // 창 위치를 화면 좌측 상단으로 이동
-        }
-
-        // 페이지가 로드될 때 setWindowSize 함수를 호출하여 창 크기를 조절
-        window.onload = setWindowSize;
-    </script>
     <div class="container">
         <h1>Hello, World!</h1>
         <p>This is my first GitHub Pages website.</p>
