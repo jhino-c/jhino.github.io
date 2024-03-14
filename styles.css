@@ -1,0 +1,10 @@
+body {
+    width: 512px; /* 창의 너비를 512px로 고정 */
+    height: 64px; /* 창의 높이를 64px로 고정 */
+    margin: 0 auto; /* 가운데 정렬을 위한 외부 여백 설정 */
+    padding: 0; /* 내부 여백 제거 */
+}
+.container {
+    text-align: center; /* 내용 가운데 정렬 */
+    padding-top: 20px; /* 상단 여백 추가 */
+}
